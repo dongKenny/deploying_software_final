@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+
+    <body>
+        <form action="" method="POST">
+            <label>Class</label>
+            <input type="text" id="class" name="class" placeholder="Select a class">
+
+            <button type="submit" class="class button">Submit</button>
+        </form>
+
+    {% for result in message %}
+        <p>{{ result }}</p>
+    {% endfor %}
+
+    </body>
+
+</html>
