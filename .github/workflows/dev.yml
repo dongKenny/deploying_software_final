@@ -35,7 +35,7 @@ jobs:
         
     - name: Test with pytest
       run: |
-        pytest unit_test.app
+        pytest unit_test.py
         
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
