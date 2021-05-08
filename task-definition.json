@@ -1,6 +1,6 @@
 {
   "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::178027395537:role/usfca-cs-486-dev-demo-exec",
+  "executionRoleArn": "arn:aws:iam::178027395537:role/dev-kdong4",
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
