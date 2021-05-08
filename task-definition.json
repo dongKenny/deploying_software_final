@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "usfca-cs-486-dev-demo",
+          "awslogs-group": "dev-kdong4",
           "awslogs-region": "us-west-2",
           "awslogs-stream-prefix": "demo"
         }
@@ -42,7 +42,7 @@
       "memoryReservation": 128,
       "volumesFrom": [],
       "stopTimeout": 30,
-      "image": "178027395537.dkr.ecr.us-west-2.amazonaws.com/usfca-cs-486-dev-demo",
+      "image": "178027395537.dkr.ecr.us-west-2.amazonaws.com/dev-kdong4",
       "startTimeout": 30,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -64,13 +64,13 @@
   ],
   "placementConstraints": [],
   "memory": "512",
-  "taskRoleArn": "arn:aws:iam::178027395537:role/usfca-cs-486-dev-demo-task",
+  "taskRoleArn": "arn:aws:iam::178027395537:role/dev-kdong4-task",
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-west-2:178027395537:task-definition/usfca-cs-486-dev-demo:3",
-  "family": "usfca-cs-486-dev-demo",
+  "taskDefinitionArn": "arn:aws:ecs:us-west-2:178027395537:task-definition/dev-kdong4:3",
+  "family": "dev-kdong4",
   "requiresAttributes": [
     {
       "targetId": null,
