@@ -45,7 +45,7 @@ def dnd_api_call(dnd_class):
     return result
 
 
-@app.route('/dnd', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def dnd():
     result = ""
     if request.method == "POST":
@@ -58,9 +58,9 @@ def dnd():
     return render_template("dnd.html", message=result.split("\n"))
 
 
-@app.route('/')
-def index():
-    return 'Go to /dnd instead!'
+# @app.route('/')
+# def index():
+#     return 'Go to /dnd instead!'
 
 
 if __name__ == '__main__':
