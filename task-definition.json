@@ -1,6 +1,6 @@
 {
   "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::178027395537:role/dev-kdong4",
+  "executionRoleArn": "arn:aws:iam::178027395537:role/dev-kdong4-exec",
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
@@ -11,7 +11,7 @@
         "options": {
           "awslogs-group": "dev-kdong4",
           "awslogs-region": "us-west-2",
-          "awslogs-stream-prefix": "demo"
+          "awslogs-stream-prefix": "kdong4"
         }
       },
       "entryPoint": null,
@@ -25,12 +25,7 @@
       "command": null,
       "linuxParameters": null,
       "cpu": 256,
-      "environment": [
-        {
-          "name": "ENV",
-          "value": "dev"
-        }
-      ],
+      "environment": [],
       "resourceRequirements": null,
       "ulimits": [],
       "dnsServers": null,
@@ -59,7 +54,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "usfca-cs-486-dev-demo"
+      "name": "dev-kdong4"
     }
   ],
   "placementConstraints": [],
@@ -69,7 +64,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-west-2:178027395537:task-definition/dev-kdong4:3",
+  "taskDefinitionArn": "arn:aws:ecs:us-west-2:178027395537:task-definition/dev-kdong4:1",
   "family": "dev-kdong4",
   "requiresAttributes": [
     {
@@ -139,7 +134,7 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "256",
-  "revision": 3,
+  "revision": 1,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
