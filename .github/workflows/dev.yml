@@ -49,7 +49,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Docker build and push
-      id: build-image
+      id: build-image-dev
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: dev-kdong4
@@ -60,12 +60,12 @@ jobs:
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
         
     - name: Update task definition
-      id: task-def
+      id: task-def-dev
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition.json
         container-name: dev-kdong4
-        image: ${{ steps.build-image.outputs.image }}
+        image: ${{ steps.build-image-dev.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
@@ -116,7 +116,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Docker build and push to prod
-      id: build-image
+      id: build-image-prod
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: prod-kdong4
@@ -132,7 +132,7 @@ jobs:
       with:
         task-definition: task-definition-prod.json
         container-name: prod-kdong4
-        image: ${{ steps.build-image.outputs.image }}
+        image: ${{ steps.build-image-prod.outputs.image }}
 
     - name: Deploy Amazon ECS task definition for prod
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
