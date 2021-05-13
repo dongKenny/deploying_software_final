@@ -70,7 +70,7 @@ jobs:
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
-        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        task-definition: ${{ steps.task-def-dev.outputs.task-definition }}
         service: dev-kdong4
         cluster: dev-kdong4
         wait-for-service-stability: true
